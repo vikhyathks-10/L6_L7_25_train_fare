@@ -42,9 +42,48 @@ pip install pytest coverage
 
 ## Code Coverage Analysis
 
-Run the code coverage test cases:
+Run the code coverage test cases from the `Lab 6` directory:
 
 ```bash
 python -m coverage erase
+python -m coverage run --source=train_fare -m pytest -v CodeCoverageTest_PES2UG24CS586_train_fare.py
+python -m coverage report -m
+```
 
-python -m coverage run --source=train_fare -m pytest
+### Result: 100% Code Coverage
+
+- Tests passed: **18**
+- Statements: **31**
+- Missed statements: **0**
+- Line coverage: **100%**
+
+## Branch Coverage Analysis
+
+Run the branch coverage test cases from the `Lab 6` directory:
+
+```bash
+python -m coverage erase
+python -m coverage run --branch --source=train_fare -m pytest -v BranchCoverageTest_PES2UG24CS586_train_fare.py
+python -m coverage report -m
+```
+
+### Result: 100% Branch Coverage
+
+- Tests passed: **25**
+- Statements: **31**
+- Missed statements: **0**
+- Branches: **22**
+- Partial branches: **0**
+- Branch coverage: **100%**
+
+## Overall Test Summary
+
+| Analysis | Tests Passed | Coverage Result |
+| --- | ---: | ---: |
+| Code coverage | 18 | 100% line coverage |
+| Branch coverage | 25 | 100% branch coverage |
+| **Total test executions** | **43** | **100% line and branch coverage** |
+
+## Conclusion
+
+The Train Fare Calculator was tested using separate code coverage and branch coverage test suites. All 18 code coverage tests and all 25 branch coverage tests passed. The final reports show 100% line coverage and 100% branch coverage, with no missed statements or partial branches.
